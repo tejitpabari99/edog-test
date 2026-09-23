@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/map/definition/2.1.0/schema.json",
+  "basemap": {},
+  "dataSources": [
+    {
+      "datasourceId": "3d8457a7-9af0-486e-bce7-6c48bb5ef659",
+      "item": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "bb5ef659-6c48-bce7-486e-9af03d8457a7"
+      }
+    },
+    {
+      "datasourceId": "7741d9c4-458b-4649-ac69-8473b830804c",
+      "item": {
+        "workspaceId": "591d720b-8a6c-4d20-816b-12e2464d1fb5",
+        "itemId": "7741d9c4-458b-4649-ac69-8473b830804c"
+      }
+    }
+  ],
+  "iconSources": [],
+  "layerSources": [
+    {
+      "id": "bac0facb-67c2-4ec1-bee6-91c9c9a3ad37",
+      "name": "Car_Parks",
+      "type": "geojson",
+      "datasourceId": "3d8457a7-9af0-486e-bce7-6c48bb5ef659",
+      "relativePath": "Files/Car_Parks.geojson"
+    },
+    {
+      "id": "698ce796-54da-4b98-a350-bf4ef4100c2e",
+      "name": "Car_Parks",
+      "type": "pmtiles",
+      "datasourceId": "3d8457a7-9af0-486e-bce7-6c48bb5ef659",
+      "relativePath": "Files/Car_Parks.pmtiles"
+    }
+  ],
+  "layerSettings": [
+    {
+      "id": "d8f0a6b0-da18-4364-a420-f9760d3fc689",
+      "name": "Car_Parks",
+      "sourceId": "bac0facb-67c2-4ec1-bee6-91c9c9a3ad37",
+      "options": {
+        "color": "#B146C2",
+        "type": "vector",
+        "visible": true
+      }
+    },
+    {
+      "id": "cac41a07-3c26-456c-93f9-561b48c75ed5",
+      "name": "Car_Parks (Car_Parks)",
+      "sourceId": "698ce796-54da-4b98-a350-bf4ef4100c2e",
+      "sourceLayerId": "Car_Parks",
+      "options": {
+        "color": "#13A10E",
+        "type": "vector",
+        "visible": true,
+        "sourceLayer": "Car_Parks"
+      }
+    }
+  ]
+}

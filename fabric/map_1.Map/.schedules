@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/schedules/1.0.0/schema.json",
+  "schedules": [
+    {
+      "enabled": true,
+      "enabledControlType": "UserEnabled",
+      "jobType": "BuildTileset",
+      "configuration": {
+        "type": "Cron",
+        "startDateTime": "2026-09-23T12:43:52",
+        "endDateTime": "2026-09-24T22:44:00",
+        "localTimeZoneId": "Pacific Standard Time",
+        "interval": 2
+      },
+      "parameters": [
+        {
+          "name": "ScheduleName",
+          "value": "Car_Parks.pmtiles-2026-09-23T12:44:26-Pacific_Standard_Time",
+          "type": "Text"
+        }
+      ],
+      "executionData": {
+        "version": "1.0",
+        "sources": [
+          {
+            "type": "Lakehouse",
+            "item": {
+              "referenceType": "ById",
+              "workspaceId": "d7d39955-c709-41f5-a14c-5b293ab12ab0",
+              "itemId": "3d8457a7-9af0-486e-bce7-6c48bb5ef659"
+            },
+            "relativePath": "Files/Car_Parks.geojson"
+          }
+        ],
+        "destination": {
+          "type": "Lakehouse",
+          "item": {
+            "referenceType": "ById",
+            "workspaceId": "d7d39955-c709-41f5-a14c-5b293ab12ab0",
+            "itemId": "3d8457a7-9af0-486e-bce7-6c48bb5ef659"
+          },
+          "relativePath": "Files/Car_Parks.pmtiles"
+        },
+        "tilesetRecipe": {
+          "description": "",
+          "copyright": "",
+          "minZoom": 5,
+          "maxZoom": 15,
+          "layerOptions": [
+            {
+              "name": "Car_Parks",
+              "minZoom": 5,
+              "maxZoom": 15,
+              "properties": "all"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
